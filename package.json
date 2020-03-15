@@ -1,0 +1,114 @@
+{
+  "name": "react-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "rollup -c -w rollup.config.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "globals": {
+      "owl": true,
+      "handleErr": true,
+      "throwErr": true
+    },
+    "rules": {
+      "@typescript-eslint/no-angle-bracket-type-assertion": "off",
+      "semi": [
+        "error",
+        "never"
+      ],
+      "comma-dangle": [
+        2,
+        {
+          "arrays": "always-multiline",
+          "objects": "always-multiline",
+          "imports": "always-multiline",
+          "exports": "always-multiline",
+          "functions": "always-multiline"
+        }
+      ],
+      "@typescript-eslint/member-delimiter-style": [
+        "error",
+        {
+          "multiline": {
+            "delimiter": "none",
+            "requireLast": true
+          },
+          "singleline": {
+            "delimiter": "semi",
+            "requireLast": false
+          }
+        }
+      ]
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "jsxBracketSameLine": false
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.1",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/parser": "2.x",
+    "babel-eslint": "10.x",
+    "eslint": "6.x",
+    "eslint-config-react-app": "^5.2.0",
+    "eslint-plugin-flowtype": "3.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "1.x",
+    "husky": ">=4",
+    "lint-staged": ">=10",
+    "prettier": "^1.19.1",
+    "rollup": "^2.0.6",
+    "rollup-plugin-livereload": "^1.0.4",
+    "rollup-plugin-postcss": "^2.4.1",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-typescript": "^1.0.1",
+    "sass": "^1.26.3",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.md": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
