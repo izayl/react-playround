@@ -1,5 +1,6 @@
-import { createElement } from 'react'
+import React from 'react'
 import { render } from 'react-dom'
 import './index.scss'
+import { App } from './app'
 
-render(createElement("h1", null, "React Playground"), document.getElementById('app'))
+render(<App />, document.getElementById('app'))
