@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "rollup -c -w rollup.config.js"
+    "dev": "rollup -c -w rollup.config.js",
+    "test": "jest"
   },
   "eslintConfig": {
     "extends": "react-app",
@@ -66,12 +67,19 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@testing-library/react": "^10.0.1",
+    "@testing-library/react-hooks": "^3.2.1",
+    "@types/jest": "^25.1.4",
     "@types/node": "^13.9.1",
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
     "@typescript-eslint/eslint-plugin": "2.x",
     "@typescript-eslint/parser": "2.x",
     "babel-eslint": "10.x",
+    "babel-jest": "^25.1.0",
     "eslint": "6.x",
     "eslint-config-react-app": "^5.2.0",
     "eslint-plugin-flowtype": "3.x",
@@ -80,8 +88,10 @@
     "eslint-plugin-react": "7.x",
     "eslint-plugin-react-hooks": "1.x",
     "husky": ">=4",
+    "jest": "^25.1.0",
     "lint-staged": ">=10",
     "prettier": "^1.19.1",
+    "react-test-renderer": "^16.13.0",
     "rollup": "^2.0.6",
     "rollup-plugin-livereload": "^1.0.4",
     "rollup-plugin-postcss": "^2.4.1",
